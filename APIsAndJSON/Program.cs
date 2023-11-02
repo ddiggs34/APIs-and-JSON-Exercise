@@ -7,29 +7,48 @@ namespace APIsAndJSON
     {
 
 
+
+
         static void Main(string[] args)
         {
-            var client = new HttpClient();
-            var quote = new RonVSKanyeAPI(client);
+            OpenWeatherMapAPI.GetWeather();
 
-            Console.WriteLine("Very interesting convo here from Kanye and Ron Swanson");
+            Console.WriteLine("----------------------------------------------------");
+            
+            //var client = new HttpClient();
+            //var quote = new RonVSKanyeAPI(client);
 
-            for (int i = 0; i < 5; i++) 
-            {
+            //Console.WriteLine("Very interesting convo here from Kanye and Ron Swanson");
+
+            //for (int i = 0; i < 5; i++) 
+            //{
                
 
-                Console.WriteLine(" ");
+            //    Console.WriteLine(" ");
 
-                Console.WriteLine($"Kanye: {quote.Kanye()}");
+            //    Console.WriteLine($"Kanye: {quote.Kanye()}");
 
-                Console.WriteLine(" ");
+            //    Console.WriteLine(" ");
 
 
-                Console.WriteLine($"Ron: {quote.Ron()}");
-            }
+            //    Console.WriteLine($"Ron: {quote.Ron()}");
+            //}
+
+
+
+
+            //Console.WriteLine("------------------------------------------");
+            ////to use an api key
+            //var apiKeyObj = File.ReadAllText("appsettings.json");
+
+            ////get the api key from the appsettings file using the name "apikey"
+            //var apiKey = JObject.Parse(apiKeyObj).GetValue("apikey").ToString();
+
+            //Console.WriteLine(apiKey);
 
         }
 
+       
 
     }
 }
